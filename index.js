@@ -1,5 +1,5 @@
 
-// function that verifies correctness of an email
+// email validation with regex
 function check_email(){
     var login = document.getElementById("email").value;
     var spr = new RegExp('[a-z1-9]{2,}[@][a-z1-9]{2,}[.][a-z1-9]{2,3}')
@@ -12,10 +12,10 @@ function check_email(){
 }
 
 
-// function that verifies correctness of an password
+// password validation with regex
 function check_password(){
     var password = document.getElementById("password").value;
-    var spr = new RegExp('[a-z1-9]{6,}')
+    var spr = new RegExp('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[0-9])(?=.{8,})')
     if((spr.test(password))){
         console.log("haslo ok");
     }
@@ -24,11 +24,32 @@ function check_password(){
     }
 }
 
-// function that checks if email is in base
-function log_in(){
-    var login = document.getElementById("email").value;
-    var email = login.toLowerCase();
-    alert(email);
 
+// verification user email with database
+function verify_email(){
+    var user = document.getElementById("email").value
+    var user = user.toLowerCase();
+    var mydata = JSON.parse(data);
+    for (var i = 0; i <= mydata.length; i++){
+        if(mydata[i].email == user){
+            console.log("user email in database");
+        }
+        else {
+            console.log("unknown user");
+        }
+    }
 }
 
+// verification user password with database
+function verify_password(){
+    var user_password = document.getElementById("password").value
+    var mydata = JSON.parse(data);
+    for (var i = 0; i <= mydata.length; i++){
+        if(mydata[i].password == user_password){
+            console.log("correct password");
+        }
+        else {
+            console.log("uncorrect password");
+        }
+    }
+}
