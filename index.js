@@ -30,7 +30,7 @@ function verify_email(){
     var user = document.getElementById("email").value
     var user = user.toLowerCase();
     var mydata = JSON.parse(data);
-    for (var i = 0; i <= mydata.length; i++){
+    for (var i = 0; i < mydata.length; i++){
         if(mydata[i].email == user){
             console.log("user email in database");
         }
@@ -44,7 +44,7 @@ function verify_email(){
 function verify_password(){
     var user_password = document.getElementById("password").value
     var mydata = JSON.parse(data);
-    for (var i = 0; i <= mydata.length; i++){
+    for (var i = 0; i < mydata.length; i++){
         if(mydata[i].password == user_password){
             console.log("correct password");
         }
