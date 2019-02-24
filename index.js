@@ -7,7 +7,7 @@ function check_email(){
         console.log("poprawny email");
     }
     else {
-        alert("niepoprawny email!");
+        document.getElementById("email").style.borderColor = "red";
     }
 }
 
@@ -20,7 +20,7 @@ function check_password(){
         console.log("haslo ok");
     }
     else {
-        alert("haslo za krotkie!");
+        document.getElementById("password").style.borderColor = "red";
     }
 }
 
@@ -33,6 +33,8 @@ function verify_email(){
     for (var i = 0; i < mydata.length; i++){
         if(mydata[i].email == user){
             console.log("user email in database");
+            break;
+
         }
         else {
             console.log("unknown user");
@@ -43,13 +45,25 @@ function verify_email(){
 // verification user password with database
 function verify_password(){
     var user_password = document.getElementById("password").value
+    var user = document.getElementById("email").value
     var mydata = JSON.parse(data);
     for (var i = 0; i < mydata.length; i++){
-        if(mydata[i].password == user_password){
-            console.log("correct password");
+        if(mydata[i].password == user_password && mydata[i].email == user){
+            console.log(mydata[i].password, mydata[i].email);
+            var logged = mydata[i].email;
+            console.log("Zalogowany użytkownik " + logged);
+            break;
         }
         else {
             console.log("uncorrect password");
         }
     }
 }
+
+function login(){
+    check_email();
+    check_password();
+    verify_email();
+    verify_password();
+}
+

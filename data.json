@@ -1,1 +1,1 @@
-data = '[{"name": "Zofia", "email": "zn@gmail.com", "password": "Zosia!23"}]';
+data = '[{"name": "Zofia", "email": "zn@gmail.com", "password": "Zosia!23"}, {"name": "Łukasz", "email": "lw@gmail.com", "password": "Lukasz!23"}]';
