@@ -76,7 +76,7 @@ function login(){
 function home(){
     if(zalogowany != undefined){
         console.log("zalogowałeś się");
-        window.location.href = "index.html";
+        window.location.href = "home.html";
     }  
 }
 
