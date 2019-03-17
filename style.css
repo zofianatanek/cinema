@@ -1,0 +1,137 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #cecece;
+}
+
+.top_nav {
+    height: 88px;
+    margin: none;
+    background-color: #efefef;
+    display: flex;
+    justify-content: space-between;
+}
+
+.top_nav .home {
+    color: #db3bcd;
+    font-size: 32px;  
+    display: flex;
+    align-items: center;
+    margin-left: 48px;
+}
+
+.top_nav a {
+    color: #db3bcd;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.menu {
+    color: #db3bcd;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-right: 48px;
+}
+
+.top_nav ul {
+    list-style-type: none;
+    display: flex;
+}
+    
+.top_nav li {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+
+/*  OVERLAY LOGNIN PANEL */
+
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */    
+    height: 0;
+    width: 100%;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(61,60,60); /* Black fallback color */
+    background-color: rgba(61,60,60, 0.7); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.8s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
+  
+  /* Position the content inside the overlay */
+  .overlay-content {
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  }
+
+.login_panel {
+    text-align: center;
+    padding-top: 10%;
+}
+.login_panel form {
+   font-size: 28px; 
+}
+
+#email_message {
+    font-size: 12px;
+    margin: 5px;
+}
+#password_message {
+    font-size: 12px;
+    margin: 5px;
+}
+
+.login_panel input[type="text"] {
+    width: 400px;
+    height: 36px;
+ }
+ .login_panel input[type="password"] {
+    width: 400px;
+    height: 36px;
+ }
+
+ .login_panel input[type="button"] {
+    font-size: 18px;
+    padding: 15px 32px;
+    background-color: #db3bcd;
+    border: none;
+    cursor: pointer;
+ }
+
+.overlay a {
+    color: black;
+    text-decoration: none;
+}
+
+  /* When you mouse over the navigation links, change their color */
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  
+  /* Position the close button (top right corner) */
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }

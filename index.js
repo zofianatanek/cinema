@@ -1,4 +1,18 @@
 
+
+
+// LOGIN PANEL
+/* Open */
+function openNav() {
+    document.getElementById("myNav").style.height = "100%";
+  }
+  
+  /* Close */
+  function closeNav() {
+    document.getElementById("myNav").style.height = "0%";
+  }
+
+
 // email validation with regex
 function check_email(){
     var login = document.getElementById("email").value;
@@ -7,7 +21,8 @@ function check_email(){
         console.log("poprawny email");
     }
     else {
-        document.getElementById("email").style.borderColor = "red";
+        document.getElementById("email").style.borderColor = "#db3bcd";
+        document.getElementById("email_message").innerHTML = "Niepoprawny format email";
     }
 }
 
@@ -20,7 +35,8 @@ function check_password(){
         console.log("haslo ok");
     }
     else {
-        document.getElementById("password").style.borderColor = "red";
+        document.getElementById("password").style.borderColor = "#db3bcd";
+        document.getElementById("password_message").innerHTML = "Hasło musi mieć min. 8 znaków w tym: duże i małe litery, cyfry i znak specjalny"
     }
 }
 
@@ -45,6 +61,20 @@ function verify_email(){
 
 var zalogowany
 
+
+// Memorizes logged user and changes button "account" to "welcome + logged user"
+function logged_user(a){
+    var sp1 = document.createElement("span"); //create new span element
+    sp1.setAttribute("id", "loggedUser"); // set attribute of new span element
+    var sp1_content = document.createTextNode("Witaj " + a); 
+    sp1.appendChild(sp1_content);
+    var sp2 = document.getElementById("account");
+    var parentDiv = sp2.parentNode;
+    parentDiv.replaceChild(sp1, sp2);
+
+
+}
+
 // verification user password with database
 function verify_password(){
     var user_password = document.getElementById("password").value
@@ -52,9 +82,10 @@ function verify_password(){
     var mydata = JSON.parse(data);
     for (var i = 0; i < mydata.length; i++){
         if(mydata[i].password == user_password && mydata[i].email == user){
-            console.log(mydata[i].password, mydata[i].email);
-            zalogowany = mydata[i].email;
-            // console.log("Zalogowany użytkownik " + logged);
+            // console.log(mydata[i].password, mydata[i].email);
+            zalogowany = mydata[i].name;
+            console.log("Zalogowany użytkownik " + zalogowany);
+            logged_user(zalogowany);
               
         }
         else {

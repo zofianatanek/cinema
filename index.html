@@ -1,21 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Retro Cinema</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <form>
-        <p>Login: <input id = "email", type="text", placeholder="Enter email"></p>
-        <p>Password: <input id = "password" type="password", placeholder="Enter password"> </p>
-        <input type="button", value= "log in", onclick = login(),home()>
+
+    <!-- Top navigation menu -->
+    <div class="top_nav">
+        <div class="home"><a href="home.html">Retro cinema</a></div>
+        <div class="menu">
+            <ul>
+                <li><span id="account" style="cursor:pointer" onclick="openNav()">Konto</span></li>
+                <li><a href="">Repertuar</a></li>
+                <li><a href="">Cennik</a></li>
+                <li><a href="">Kontakt</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Overlay account panel -->
+    <!-- The overlay -->
+    <div id="myNav" class="overlay">
+
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+        <!-- Overlay content -->
+        <div class = "login_panel">
+                <form>
+                        <p>Login: <input id="email" , type="text" , placeholder="Enter email"></p>
+                        <p id="email_message"></p>
+                        <p>Hasło: <input id="password" type="password" , placeholder="Enter password"> </p>
+                        <p id="password_message"></p>
+                        <input type="button" , value="Zaloguj" , onclick=login()>
+                    </form>
+        </div>
         
-    </form>
+    </div>
+
+    </div>
 
     <script src="data.json"></script>
     <script src="index.js"></script>
-    
 </body>
+
 </html>
