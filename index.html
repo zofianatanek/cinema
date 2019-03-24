@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Retro Cinema</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="slider.css">
 </head>
 
 <body>
@@ -16,7 +17,7 @@
         <div class="home"><a href="home.html">Retro cinema</a></div>
         <div class="menu">
             <ul>
-                <li><span id="account" style="cursor:pointer" onclick="openNav()">Konto</span></li>
+                <li><span id="account" style="cursor:pointer" onclick="openNav()">Konto</span><br><button id="wyloguj">Wyloguj</button></li>
                 <li><a href="">Repertuar</a></li>
                 <li><a href="">Cennik</a></li>
                 <li><a href="">Kontakt</a></li>
@@ -32,22 +33,56 @@
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
         <!-- Overlay content -->
-        <div class = "login_panel">
-                <form>
-                        <p>Login: <input id="email" , type="text" , placeholder="Enter email"></p>
-                        <p id="email_message"></p>
-                        <p>Hasło: <input id="password" type="password" , placeholder="Enter password"> </p>
-                        <p id="password_message"></p>
-                        <input type="button" , value="Zaloguj" , onclick=login()>
-                    </form>
+        <div class="login_panel">
+            <form>
+                <p>Login: <input id="email" , type="text" , placeholder="Enter email"></p>
+                <p id="email_message"></p>
+                <p>Hasło: <input id="password" type="password" , placeholder="Enter password"> </p>
+                <p id="password_message"></p>
+                <input type="button" , value="Zaloguj" , onclick=login()>
+            </form>
         </div>
-        
     </div>
 
+   
+    <!-- <div class="slider">
+        Full-width images with number and caption text
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="zasoby/breakfast.jpg">
+            <div class="text">Caption Text</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="zasoby/green.jpg">
+            <div class="text">Caption Two</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="zasoby/lala.jpg">
+            <div class="text">Caption Three</div>
+        </div>
+
+        Next and previous buttons
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
+    <br>
+
+    The dots/circles
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div> -->
+    
+
 
     <script src="data.json"></script>
     <script src="index.js"></script>
+    <script src="slider.js"></script>
 </body>
 
 </html>

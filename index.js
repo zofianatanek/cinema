@@ -60,17 +60,19 @@ function verify_email(){
 
 
 var zalogowany
+var wyloguj = document.getElementById("wyloguj").style.display = "none";
 
 
 // Memorizes logged user and changes button "account" to "welcome + logged user"
 function logged_user(a){
     var sp1 = document.createElement("span"); //create new span element
     sp1.setAttribute("id", "loggedUser"); // set attribute of new span element
-    var sp1_content = document.createTextNode("Witaj " + a); 
-    sp1.appendChild(sp1_content);
-    var sp2 = document.getElementById("account");
+    var sp1_content = document.createTextNode("Witaj " + a); // create content for new element
+    sp1.appendChild(sp1_content); // add content to new element
+    var sp2 = document.getElementById("account"); 
     var parentDiv = sp2.parentNode;
-    parentDiv.replaceChild(sp1, sp2);
+    parentDiv.replaceChild(sp1, sp2); // replace existing span with new span element
+    wyloguj = document.getElementById("wyloguj").style.display = "block";
 
 
 }
@@ -84,7 +86,6 @@ function verify_password(){
         if(mydata[i].password == user_password && mydata[i].email == user){
             // console.log(mydata[i].password, mydata[i].email);
             zalogowany = mydata[i].name;
-            console.log("Zalogowany użytkownik " + zalogowany);
             logged_user(zalogowany);
               
         }
