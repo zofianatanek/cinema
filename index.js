@@ -59,8 +59,16 @@ function verify_email(){
 }
 
 
+// Log out button functionality
 var zalogowany
-var wyloguj = document.getElementById("wyloguj").style.display = "none";
+var wyloguj = document.getElementById("wyloguj");
+wyloguj.style.display = "none";
+wyloguj.addEventListener("click", function(){
+    console.log("wylogowałeś się");
+    zalogowany = null;
+})
+
+
 
 
 // Memorizes logged user and changes button "account" to "welcome + logged user"
@@ -73,7 +81,6 @@ function logged_user(a){
     var parentDiv = sp2.parentNode;
     parentDiv.replaceChild(sp1, sp2); // replace existing span with new span element
     wyloguj = document.getElementById("wyloguj").style.display = "block";
-
 
 }
 
