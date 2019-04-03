@@ -59,30 +59,42 @@ function verify_email(){
 }
 
 
-// Log out button functionality
-var zalogowany
-var wyloguj = document.getElementById("wyloguj");
-wyloguj.style.display = "none";
-wyloguj.addEventListener("click", function(){
-    console.log("wylogowałeś się");
-    zalogowany = null;
-})
+var span_wylogowany
+var span_zalogowany
+var parentDiv
+
+
+
 
 
 
 
 // Memorizes logged user and changes button "account" to "welcome + logged user"
-function logged_user(a){
-    var sp1 = document.createElement("span"); //create new span element
-    sp1.setAttribute("id", "loggedUser"); // set attribute of new span element
-    var sp1_content = document.createTextNode("Witaj " + a); // create content for new element
-    sp1.appendChild(sp1_content); // add content to new element
-    var sp2 = document.getElementById("account"); 
-    var parentDiv = sp2.parentNode;
-    parentDiv.replaceChild(sp1, sp2); // replace existing span with new span element
+function logged_user(a_zalogowany){
+    span_zalogowany = document.createElement("span"); //create new span element
+    span_zalogowany.setAttribute("id", "loggedUser"); // set attribute of new span element
+    var span_zalogowany_content = document.createTextNode("Witaj " + a_zalogowany); // create content for new element
+    span_zalogowany.appendChild(span_zalogowany_content); // add content to new element
+    span_wylogowany = document.getElementById("account"); 
+    parentDiv = span_wylogowany.parentNode;
+    parentDiv.replaceChild(span_zalogowany, span_wylogowany); // replace existing span with new span element
+    
     wyloguj = document.getElementById("wyloguj").style.display = "block";
-
+    
 }
+
+// Log out button functionality
+var zalogowany
+var wyloguj = document.getElementById("wyloguj");
+wyloguj.addEventListener("click", function(){
+    wyloguj = document.getElementById("wyloguj");
+    console.log("wylogowałeś się");
+    zalogowany = null;
+    parentDiv.replaceChild(span_wylogowany, span_zalogowany);
+    wyloguj = document.getElementById("wyloguj").style.display = "none";  
+})
+
+
 
 // verification user password with database
 function verify_password(){
@@ -90,14 +102,16 @@ function verify_password(){
     var user = document.getElementById("email").value
     var mydata = JSON.parse(data);
     for (var i = 0; i < mydata.length; i++){
-        if(mydata[i].password == user_password && mydata[i].email == user){
-            // console.log(mydata[i].password, mydata[i].email);
-            zalogowany = mydata[i].name;
-            logged_user(zalogowany);
-              
-        }
-        else {
-            console.log("uncorrect password");
+        if(mydata[i].email == user){
+            if(mydata[i].password == user_password){ 
+                // console.log(mydata[i].password, mydata[i].email);
+                zalogowany = mydata[i].name;
+                logged_user(zalogowany);
+                break;
+            }            
+            else {
+                console.log("uncorrect password");
+            }
         }
     }
 }
@@ -109,7 +123,9 @@ function login(){
     check_password();
     verify_email();
     verify_password();
+    // dodać zamykanie overlaya
 }
+
 
 
 function home(){
