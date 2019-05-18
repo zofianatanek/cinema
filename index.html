@@ -8,13 +8,17 @@
     <title>Retro Cinema</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="slider.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+    <link rel="stylesheet" href="showtimes.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
 </head>
 
 <body>
 
     <!-- Top navigation menu -->
     <div class="top_nav">
-        <div class="home"><a href="home.html">Retro cinema</a></div>
+        <div class="home"><a href="index.html">Retro cinema</a></div>
+
         <div class="menu">
             <ul>
                 <li><span id="account" style="cursor:pointer" onclick="openNav()">Konto</span><br>
@@ -45,45 +49,122 @@
         </div>
     </div>
 
-    <!-- Slideshow container -->
-    <div class="slideshow-container">
 
-        <!-- Full-width images with number and caption text -->
-        <div class="mySlides fade">
-            <div class="polecane">Polecane</div>
-            <img src="zasoby/1.jpg" style="width:900px; height: 500px">
-            <div class="text">
-                <p class="title">Śniadanie u Tiffaniego</p>
-                <p class="shortcut">| Komedia | 12+ | 100 min |</p>
+    <!-- MAIN PAGE CONTENT -->
+
+    <div class="page_container">
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <div class="polecane">Polecane</div>
+                <img src="zasoby/1.jpg" style="width:1024px; height: auto">
+                <div class="text">
+                    <p class="title">Śniadanie u Tiffaniego</p>
+                    <p class="shortcut">| Komedia | 12+ | 100 min |</p>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="polecane">Polecane</div>
+                <img src="zasoby/2.jpg" style="width:1024px; height: auto">
+                <div class="text">
+                    <p class="title">Green Book</p>
+                    <p class="shortcut">| Dramat | 15+ | 120min |</p>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="polecane">Polecane</div>
+                <img src="zasoby/3.png" style="width:1024px; height: auto">
+                <div class="text">
+                    <p class="title">La La Land</p>
+                    <p class="shortcut">| Musical | 12+ | 130 min |</p>
+                </div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+
+        <div class="movies">
+            <div class="cinemas_list">
+                <h2>Nasze kina</h2>
+                <ul>
+                    <li>
+                        <div class="cinema" style="border-bottom: 1px solid #db3bcd">
+                            <p>
+                                <h3>Wrocław</h3>
+                                Retro Cinema Wroclavia </br>
+                                ul. Wrocławska 5, 50-046 Wrocław </br>
+                                <span class="repertuar">Repertuar ➨</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="border-bottom: 1px solid #db3bcd">
+                            <p>
+                                <h3>Poznań</h3>
+                                Retro Cinema Poznania </br>
+                                ul. Poznańska 34, 80-104 Poznań </br>
+                                <span class="repertuar">Repertuar ➨</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="border-bottom: 1px solid #db3bcd">
+                            <p>
+                                <h3>Kraków</h3>
+                                Retro Cinema Krakowia </br>
+                                ul. Krakowska 115, 20-003 Kraków </br>
+                                <span class="repertuar">Repertuar ➨</span>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Repertuar -->
+            <div class="showtimes">
+                <h2>Repertuar</h2>
+                <div class="movie_table">
+                    <table>
+                        <tr>
+                            <th class="title2">Film</th>
+                            <th class="hours">Godzina</th>
+                        </tr>
+                        <tr>
+                            <td class="title2">La La Land</td>
+                            <td class="hours"><span>15:45</span> <span>18:00</span> <span>20:15</span></td>
+                        </tr>
+                        <tr>
+                            <td class="title2">Narodziny gwiazdy</td>
+                            <td class="hours"><span>15:45</span> <span>18:00</span> <span>20:15</span></td>
+                        </tr>
+                        <tr>
+                            <td class="title2">Breakfast at Tiffany's</td>
+                            <td class="hours"><span>15:45</span> <span>18:00</span> <span>20:15</span></td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
 
-        <div class="mySlides fade">
-            <div class="polecane">Polecane</div>
-            <img src="zasoby/2.jpg" style="width:900px; height: 500px">
-            <div class="text">
-                <p class="title">Green Book</p>
-                <p class="shortcut">| Dramat | 15+ | 120min |</p>
-            </div>
-        </div>
 
-        <div class="mySlides fade">
-            <div class="polecane">Polecane</div>
-            <img src="zasoby/3.jpg" style="width:900px; height: 500px">
-            <div class="text">
-                <p class="title">La La Land</p>
-                <p class="shortcut">| Musical | 12+ | 130 min |</p>
-            </div>
-        </div>
-
-        <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
 
+
+
+
     <script src="data.json"></script>
+    <script src="cinemas.json"></script>
     <script src="index.js"></script>
     <script src="slider.js"></script>
+    <script src="cinemas.js"></script>
+
 </body>
 
 </html>

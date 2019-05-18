@@ -6,9 +6,12 @@ body {
     margin: 0;
     padding: 0;
     background-color: #cecece;
+    font-family: 'Noto Serif', serif;
 }
 
+/* TOP NAVIGATION */
 .top_nav {
+    max-width: 100%;
     height: 88px;
     margin: none;
     background-color: #efefef;
@@ -17,6 +20,7 @@ body {
 }
 
 .top_nav .home {
+    max-width: 100%;
     color: #db3bcd;
     font-size: 32px;  
     display: flex;
@@ -36,6 +40,8 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     margin-right: 48px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .top_nav ul {
@@ -135,3 +141,49 @@ body {
       right: 35px;
     }
   }
+
+/* MAIN PAGE CONTENT */
+.page_container {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* Cinemas and movies */
+
+.movies {
+  display: flex;
+  justify-content: space-between;
+}
+
+  /* List of cinemas */
+
+.cinemas_list {
+  max-width: 30%;
+}
+.cinemas_list h2 {
+  font-family: 'Noto Serif', serif;
+  color: #3a3a3a;
+  text-transform: uppercase;
+}
+.cinemas_list ul{
+  list-style-type: none;
+}
+
+.repertuar {
+  cursor: pointer;
+}
+
+/* Showtimes */
+
+.showtimes {
+  width: 60%;
+}
+
+.showtimes h2{
+  font-family: 'Noto Serif', serif;
+  color: #3a3a3a;
+  text-transform: uppercase;
+}
+
