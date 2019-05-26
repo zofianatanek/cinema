@@ -45,7 +45,7 @@ function check_password(){
 function verify_email(){
     var user = document.getElementById("email").value
     var user = user.toLowerCase();
-    var mydata = JSON.parse(data);
+    var mydata = JSON.parse(users);
     for (var i = 0; i < mydata.length; i++){
         if(mydata[i].email == user){
             console.log("user email in database");
@@ -100,7 +100,7 @@ wyloguj.addEventListener("click", function(){
 function verify_password(){
     var user_password = document.getElementById("password").value
     var user = document.getElementById("email").value
-    var mydata = JSON.parse(data);
+    var mydata = JSON.parse(users);
     for (var i = 0; i < mydata.length; i++){
         if(mydata[i].email == user){
             if(mydata[i].password == user_password){ 

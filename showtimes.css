@@ -1,12 +1,16 @@
-.title2 {
-    width: 40%;
-    height: 60px;
-}
-.title2 {
+.column_title {
     text-align: left;
+    background-color: #aaaaaa;
 }
 
-.hours {
-    width: 60%;
+.movie_title {
+    height: auto;
+    text-align: left;
+    background-color: #e5e3e3;
+}
+
+.movie_hours {
+    /* width: 60%; */
     text-align: center;
+    background-color: #e5e3e3;
 }

@@ -168,6 +168,7 @@ body {
   text-transform: uppercase;
 }
 .cinemas_list ul{
+  padding-left: 12px;
   list-style-type: none;
 }
 

@@ -22,7 +22,7 @@
         <div class="menu">
             <ul>
                 <li><span id="account" style="cursor:pointer" onclick="openNav()">Konto</span><br>
-                    <button id="wyloguj" style="display:none">click</button></li>
+                    <button id="wyloguj" style="display:none">Wyloguj</button></li>
                 <li><a href="">Repertuar</a></li>
                 <li><a href="">Cennik</a></li>
                 <li><a href="">Kontakt</a></li>
@@ -100,7 +100,7 @@
                                 <h3>Wrocław</h3>
                                 Retro Cinema Wroclavia </br>
                                 ul. Wrocławska 5, 50-046 Wrocław </br>
-                                <span class="repertuar">Repertuar ➨</span>
+                                <span class="repertuar" onclick="insert_showtimes(0)">Repertuar ➨</span>
                             </p>
                         </div>
                     </li>
@@ -110,7 +110,7 @@
                                 <h3>Poznań</h3>
                                 Retro Cinema Poznania </br>
                                 ul. Poznańska 34, 80-104 Poznań </br>
-                                <span class="repertuar">Repertuar ➨</span>
+                                <span class="repertuar" onclick="insert_showtimes(1)">Repertuar ➨</span>
                             </p>
                         </div>
                     </li>
@@ -120,7 +120,7 @@
                                 <h3>Kraków</h3>
                                 Retro Cinema Krakowia </br>
                                 ul. Krakowska 115, 20-003 Kraków </br>
-                                <span class="repertuar">Repertuar ➨</span>
+                                <span class="repertuar" onclick="insert_showtimes(2)">Repertuar ➨</span>
                             </p>
                         </div>
                     </li>
@@ -130,23 +130,41 @@
             <!-- Repertuar -->
             <div class="showtimes">
                 <h2>Repertuar</h2>
+                <h3>Kino : <span id = "cinema_name"></span></h3>
                 <div class="movie_table">
                     <table>
                         <tr>
-                            <th class="title2">Film</th>
-                            <th class="hours">Godzina</th>
+                            <th class="column_title" style="width: 246px">Film</th>
+                            <th class="column_title" style="width:364px">Godzina</th>
                         </tr>
                         <tr>
-                            <td class="title2">La La Land</td>
-                            <td class="hours"><span>15:45</span> <span>18:00</span> <span>20:15</span></td>
+                            <td><span class="movie_title"></span></br>
+                                <span class="movie_length"></span></br>
+                                <!-- <div style="text-align: right"><a href="">Rezerwuj</a></div> -->
+                            </td>
+                            <td class="movie_hours"> 
+                                <span></span>
+                                <span></span>
+                                <span></span> 
+                            </td>
                         </tr>
                         <tr>
-                            <td class="title2">Narodziny gwiazdy</td>
-                            <td class="hours"><span>15:45</span> <span>18:00</span> <span>20:15</span></td>
+                            <td><span class="movie_title"></span></br>
+                                <span class="movie_length"></span></br>
+                                <!-- <div style="text-align: right"><a href="">Rezerwuj</a></div> -->
+                            </td>
+                            <td class="movie_hours"><span></span>
+                                <span></span>
+                                <span></span>  </td>
                         </tr>
                         <tr>
-                            <td class="title2">Breakfast at Tiffany's</td>
-                            <td class="hours"><span>15:45</span> <span>18:00</span> <span>20:15</span></td>
+                            <td><span class="movie_title"></span></br>
+                                <span class="movie_length"></span></br>
+                                <!-- <div style="text-align: right"><a href="">Rezerwuj</a></div> -->
+                            </td>
+                            <td class="movie_hours"> <span></span>
+                                <span></span>
+                                <span></span> </td>
                         </tr>
                     </table>
                 </div>
@@ -157,13 +175,13 @@
     </div>
 
 
-
-
     <script src="data.json"></script>
-    <script src="cinemas.json"></script>
+    <script src="cinemas.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="index.js"></script>
     <script src="slider.js"></script>
-    <script src="cinemas.js"></script>
+    
 
 </body>
 

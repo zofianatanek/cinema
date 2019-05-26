@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Retro Cinema</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="slider.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+    <link rel="stylesheet" href="showtimes.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+</head>
+
+<body>
+
+    <!-- Top navigation menu -->
+    <div class="top_nav">
+        <div class="home"><a href="index.html">Retro cinema</a></div>
+
+        <div class="menu">
+            <ul>
+                <li><span id="account" style="cursor:pointer" onclick="openNav()">Konto</span><br>
+                    <button id="wyloguj" style="display:none">Wyloguj</button></li>
+                <li><a href="">Repertuar</a></li>
+                <li><a href="">Cennik</a></li>
+                <li><a href="">Kontakt</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Overlay account panel -->
+    <!-- The overlay -->
+    <div id="myNav" class="overlay">
+
+        <!-- Closing button -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+        <!-- Overlay content -->
+        <div class="login_panel">
+            <form>
+                <p>Login: <input id="email" , type="text" , placeholder="Enter email"></p>
+                <p id="email_message"></p>
+                <p>Hasło: <input id="password" type="password" , placeholder="Enter password"> </p>
+                <p id="password_message"></p>
+                <input type="button" , value="Zaloguj" , onclick=login()>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- MAIN PAGE CONTENT -->
+
+   <div class="pagecontainer">
+       <div class="info">
+        <h2>Sala</h2>
+       </div>
+       <div class="seats">
+           
+       </div>
+   </div>
+
+    
+
+
+
+    <script src="data.json"></script>
+    <script src="cinemas.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script src="slider.js"></script>
+    
+
+</body>
+
+</html>
