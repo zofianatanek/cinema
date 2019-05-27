@@ -1,0 +1,22 @@
+/* INFO */
+
+.info {
+  text-align: center;
+}
+
+#seats {
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  }
+  
+  .seat {
+      background-color: grey;
+      height: 25px;
+      width: 25px;
+      margin: 2px;
+      text-align: center;
+  }
