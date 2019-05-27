@@ -4,14 +4,27 @@
   text-align: center;
 }
 
+
+
+
 #seats {
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .row {
-  display: flex;
   justify-content: center;
+  display: flex;
   }
+
+  .row_number {
+    margin: 1px;
+    color:  #db3bcd;
+    font-weight: bold;
+
+  }
+
   
   .seat {
       background-color: grey;
@@ -20,3 +33,9 @@
       margin: 2px;
       text-align: center;
   }
+
+  .clicked {
+    background-color: green;
+  }
+ 
+  
