@@ -78,6 +78,7 @@ var movie = {
 
 }
 
+var currentMoviesIds = []
 
 function showtimes(a) {
     broadcast_movies(a)
@@ -85,8 +86,7 @@ function showtimes(a) {
         var chosenMovie = movie.id(i);
         document.getElementsByClassName('movie_title')[i].innerHTML = movie.title(i);
         document.getElementsByClassName('movie_length')[i].innerHTML = movie.length(i);
-        var button = document.getElementsByClassName('reservation')[i];
-        button.id = chosenMovie;
+        currentMoviesIds.push(chosenMovie);
 
         for (j = 0; j < movie.showtimes(i).length; j++) {
             document.getElementsByClassName('movie_hours')[i].children[j].innerHTML = (movie.showtimes(i))[j];
@@ -120,11 +120,13 @@ function insert_showtimes(b) {
 
 }
 
-function reservation(){
+var chosenMovie;
+
+function reservation(a){
     location.href = "./booking.html";
+    chosenMovie = currentMoviesIds[a];
+    
 }
-
-
 
 
 
