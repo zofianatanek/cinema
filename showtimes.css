@@ -6,11 +6,34 @@
 .movie_title {
     height: auto;
     text-align: left;
-    background-color: #e5e3e3;
+    font-size: 24px;
+    
 }
 
 .movie_hours {
     /* width: 60%; */
     text-align: center;
-    background-color: #e5e3e3;
+}
+
+.movie_table {
+    margin-top: 32px;
+}
+
+.movie_table td {
+    background-color: #f1f1f1;
+}
+
+.movie_table td div {
+    text-align: right;
+}
+
+.movie_table button {
+    background-color:  #f1f1f1;
+    border: none;
+    color: #db3bcd;
+    font-weight: bold;
+}
+
+.movie_id {
+    display: none;
 }

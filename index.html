@@ -13,7 +13,7 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
 </head>
 
-<body>
+<body onload="insert_showtimes(0) ">
 
     <!-- Top navigation menu -->
     <div class="top_nav">
@@ -134,12 +134,13 @@
                 <div class="movie_table">
                     <table>
                         <tr>
-                            <th class="column_title" style="width: 246px">Film</th>
-                            <th class="column_title" style="width:364px">Godzina</th>
+                            <th class="column_title" style="width: 364px">Film</th>
+                            <th class="column_title" style="width:246px">Godzina</th>
                         </tr>
                         <tr>
                             <td><span class="movie_title"></span></br>
-                                <span class="movie_length"></span></br>
+                                <span class="movie_length"></span> min</br>
+                                <div><button class="reservation" onclick="reservation()">Rezerwuj</button></div>
                                 <!-- <div style="text-align: right"><a href="">Rezerwuj</a></div> -->
                             </td>
                             <td class="movie_hours"> 
@@ -150,7 +151,8 @@
                         </tr>
                         <tr>
                             <td><span class="movie_title"></span></br>
-                                <span class="movie_length"></span></br>
+                                <span class="movie_length"></span> min</br>
+                                <div><button class="reservation" onclick="reservation()">Rezerwuj</button></div>
                                 <!-- <div style="text-align: right"><a href="">Rezerwuj</a></div> -->
                             </td>
                             <td class="movie_hours"><span></span>
@@ -159,7 +161,8 @@
                         </tr>
                         <tr>
                             <td><span class="movie_title"></span></br>
-                                <span class="movie_length"></span></br>
+                                <span class="movie_length"></span> min</br>
+                                <div><button class="reservation" onclick="reservation()">Rezerwuj</button></div>
                                 <!-- <div style="text-align: right"><a href="">Rezerwuj</a></div> -->
                             </td>
                             <td class="movie_hours"> <span></span>

@@ -15,8 +15,7 @@ for (var i = 0; i < repertuarButton.length; i++) {
 
 var cinema = JSON.parse(cinemaList);
 var movies = JSON.parse(movieList)
-// var myCinema = cinema[0].cinemas[0].name
-// console.log(myCinema);
+
 
 
 var movieIds = [];
@@ -42,7 +41,7 @@ function movie_ids(a) {
 function broadcast_movies(a) {
     movie_ids(a)
     movieIds.forEach(x => {
-     //   var x = element;
+        //   var x = element;
         var movieTitle;
         var movieShowtime;
         var movieLength;
@@ -71,8 +70,10 @@ var movie = {
     },
     showtimes: function (x) {
         return movieShowtimes[x]
+    },
+    id: function (x) {
+        return movieIds[x]
     }
-
 
 
 }
@@ -80,31 +81,52 @@ var movie = {
 
 function showtimes(a) {
     broadcast_movies(a)
-    for (i = 0; i < movieTitles.length; i++) {
+    for (i = 0; i < movieTitles.length; i++) {   
+        var chosenMovie = movie.id(i);
         document.getElementsByClassName('movie_title')[i].innerHTML = movie.title(i);
         document.getElementsByClassName('movie_length')[i].innerHTML = movie.length(i);
-        
+        var button = document.getElementsByClassName('reservation')[i];
+        button.id = chosenMovie;
+
         for (j = 0; j < movie.showtimes(i).length; j++) {
             document.getElementsByClassName('movie_hours')[i].children[j].innerHTML = (movie.showtimes(i))[j];
+        }
     }
-}
 }
 
 function reset() {
-    
- movieIds = [];
- movieTitles = [];
- movieLengths = [];
- movieShowtimes = [];
+
+    movieIds = [];
+    movieTitles = [];
+    movieLengths = [];
+    movieShowtimes = [];
     document.getElementsByClassName('movie_title').innerHTML = null;
     document.getElementsByClassName('movie_length').innerHTML = null;
-    document.getElementsByClassName('movie_hours').innerHTML= null;
+    document.getElementsByClassName('movie_hours').innerHTML = null;
 
+}
+
+ var city
+
+function chosenCity(x) {
+   city = cinema[0].cinemas[x].city;
 }
 
 
 function insert_showtimes(b) {
     reset();
     showtimes(b);
+    chosenCity(b)
 
 }
+
+function reservation(){
+    location.href = "./booking.html";
+}
+
+
+
+
+
+
+
