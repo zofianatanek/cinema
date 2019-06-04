@@ -128,7 +128,7 @@ function checkCurrentSeat() {
         currentSeats.push(currentSeat);
         currentRows.push(currentRowNumber);
     }
-    return currentSeat, currentRows
+    return currentSeats, currentRows
 }
 
 // Checking numbers of clicked seats
@@ -141,9 +141,19 @@ function storeSeatsNumbers() {
     return currentSeatsNumbers;
 }
 
-storeSeatsNumbers()
+
 
 // Storing data about choosen seats and broadcast time in local storage
+function final_reservation() {
+    storeSeatsNumbers()
+    var selectedHour = document.getElementById("hour").value;
+    sessionStorage.setItem("hour", selectedHour);
+    sessionStorage.setItem("seats", currentSeatsNumbers);
+    sessionStorage.setItem("rows", currentRows);
+}
+
+
+
 
 
 
