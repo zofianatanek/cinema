@@ -1,5 +1,13 @@
 var cinemaData = JSON.parse(cinemaList);
 
+// Displaying logged user
+document.getElementById("account").innerHTML = sessionStorage.getItem("logged_user");
+
+function logOut(){
+    sessionStorage.clear();
+    location.href = "./index.html";
+}
+
 // Displaying movie title
 function showing_chosen_movie() {
     document.getElementById("movie_title").innerHTML = sessionStorage.getItem("movie");
