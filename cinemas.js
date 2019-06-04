@@ -80,18 +80,22 @@ var movie = {
 }
 
 // Variable stores movie ids which are currently shown in showtimes section
-var currentMoviesTitles = []
+var currentMoviesTitles = [] //stores data about actual display titles
+var currentMovieShowtimes = [] //stores data about actual display showtimes hours
 
 
 //  Inserting data about movies to the showtimes table
 function showtimes(a) {
     broadcast_movies(a);
     currentMoviesTitles = [];
+    currentMovieShowtimes = [];
     for (i = 0; i < movieTitles.length; i++) {   
         var chosenMovie = movie.title(i);
         document.getElementsByClassName('movie_title')[i].innerHTML = movie.title(i);
         document.getElementsByClassName('movie_length')[i].innerHTML = movie.length(i);
         currentMoviesTitles.push(chosenMovie);
+        var chosenMovieShowtimes = movie.showtimes(i)
+        currentMovieShowtimes.push(chosenMovieShowtimes)
 
         for (j = 0; j < movie.showtimes(i).length; j++) {
             document.getElementsByClassName('movie_hours')[i].children[j].innerHTML = (movie.showtimes(i))[j];
@@ -135,10 +139,17 @@ function insert_showtimes(b) {
 }
 
 
+// Adding chosen movie data - title and broadcast hours, to session storage
 var chosenMovie;
 function reservation(a){
     chosenMovie = currentMoviesTitles[a];
+    chosenMovieHour1 = currentMovieShowtimes[a][0];
+    chosenMovieHour2 = currentMovieShowtimes[a][1];
+    chosenMovieHour3 = currentMovieShowtimes[a][2];
     sessionStorage.setItem("movie", chosenMovie);
+    sessionStorage.setItem("hour1", chosenMovieHour1);
+    sessionStorage.setItem("hour2", chosenMovieHour2);
+    sessionStorage.setItem("hour3", chosenMovieHour3);
     location.href = "./booking.html";
     
 }
