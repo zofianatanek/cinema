@@ -89,7 +89,7 @@ function showtimes(a) {
     broadcast_movies(a);
     currentMoviesTitles = [];
     currentMovieShowtimes = [];
-    for (i = 0; i < movieTitles.length; i++) {   
+    for (i = 0; i < movieTitles.length; i++) {
         var chosenMovie = movie.title(i);
         document.getElementsByClassName('movie_title')[i].innerHTML = movie.title(i);
         document.getElementsByClassName('movie_length')[i].innerHTML = movie.length(i);
@@ -122,10 +122,10 @@ var chosenCinema
 var cinemaIndex
 
 function chosen_cinema(x) {
-   chosenCinema = cinema[0].cinemas[x].name;
-   sessionStorage.setItem("chosenCinema", chosenCinema);
-   cinemaIndex = x
-   sessionStorage.setItem("cinemaIndex", cinemaIndex);
+    chosenCinema = cinema[0].cinemas[x].name;
+    sessionStorage.setItem("chosenCinema", chosenCinema);
+    cinemaIndex = x
+    sessionStorage.setItem("cinemaIndex", cinemaIndex);
 
 }
 
@@ -141,7 +141,7 @@ function insert_showtimes(b) {
 
 // Adding chosen movie data - title and broadcast hours, to session storage
 var chosenMovie;
-function reservation(a){
+function reservation(a) {
     chosenMovie = currentMoviesTitles[a];
     chosenMovieHour1 = currentMovieShowtimes[a][0];
     chosenMovieHour2 = currentMovieShowtimes[a][1];
@@ -151,7 +151,20 @@ function reservation(a){
     sessionStorage.setItem("hour2", chosenMovieHour2);
     sessionStorage.setItem("hour3", chosenMovieHour3);
     location.href = "./booking.html";
-    
+
+}
+
+function reservationButton(a) {
+    var button = document.getElementsByClassName("reservation")
+    if (zalogowany == undefined) {
+        button.disabled = true;
+        alert("Zaloguj się aby przejść do rezerwacji")
+    }
+    else {
+        button.disabled = false;
+        reservation(a)
+    }
+
 }
 
 

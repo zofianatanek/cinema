@@ -1,40 +1,34 @@
 .column_title {
-    text-align: left;
-    background-color: #aaaaaa;
+  text-align: left;
+  background-color: #aaaaaa;
 }
 
 .movie_title {
-    height: auto;
-    text-align: left;
-    font-size: 24px;
-    
+  height: auto;
+  text-align: left;
+  font-size: 24px;
 }
 
 .movie_hours {
-    /* width: 60%; */
-    text-align: center;
+  /* width: 60%; */
+  text-align: center;
 }
 
 .movie_table {
-    margin-top: 32px;
+  margin-top: 32px;
 }
 
 .movie_table td {
-    background-color: #f1f1f1;
+  background-color: #f1f1f1;
 }
 
 .movie_table td div {
-    text-align: right;
+  text-align: right;
 }
 
 .movie_table button {
-    background-color:  #f1f1f1;
-    border: none;
-    color: #db3bcd;
-    font-weight: bold;
-    
-}
-
-.movie_id {
-    display: none;
+  background-color: #f1f1f1;
+  border: none;
+  color: #db3bcd;
+  font-weight: bold;
 }

@@ -1,0 +1,267 @@
+$primary-color: #db3bcd;
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #cecece;
+  font-family: "Noto Serif", serif;
+}
+
+/* TOP NAVIGATION */
+.top_nav {
+  max-width: 100%;
+  height: 88px;
+  margin: none;
+  background-color: #efefef;
+  display: flex;
+  justify-content: space-between;
+
+  .home {
+    max-width: 100%;
+    color: $primary-color;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    margin-left: 48px;
+  }
+  a {
+    color: $primary-color;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  ul {
+    list-style-type: none;
+    display: flex;
+  }
+  li {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
+.menu {
+  color: #db3bcd;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-right: 48px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+// Big resolution
+@media screen and (min-width: 601px) {
+  .menu_responsive {
+    display: none;
+  }
+  /* Cinemas and movies */
+  .movies {
+    display: flex;
+    justify-content: space-between;
+  }
+  .cinemas_list {
+    max-width: 30%;
+  }
+  .showtimes{
+    width: 60%;
+  }
+}
+
+// Small resolution
+@media screen and (max-width: 600px) {
+  .top_nav {
+    display: flex;
+    justify-content: between;
+    padding-left: 20px;
+    padding-right: 20px;
+    .home {
+      margin-left: 0px;
+      a {
+        font-size: 20px;
+      }
+    }
+  }
+  .movies {
+    display: block;
+  }
+
+  .account {
+    color: $primary-color;
+    text-transform: uppercase;
+    padding-top: 26px;
+  }
+  .menu {
+    display: none;
+  }
+  .menu_responsive {
+    display: flex;
+    margin-top: auto;
+  }
+  .dropbtn {
+    color: $primary-color;
+    background-color: #efefef;
+    padding: 30px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown a:hover {
+    background-color: #ddd;
+  }
+
+  .show {
+    display: block;
+  }
+
+  .cinemas_list {
+    width: 90%;
+    margin: auto;
+  }
+  .showtimes{
+    width: 90%;
+    margin: auto;
+  }
+}
+
+/* OVERLAY */
+/* Background */
+.overlay {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  background-color: rgba(61, 60, 60, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.8s; /* 0.5 second transition effect to slide overlay */
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+  a:hover,
+  .overlay a:focus {
+    color: #f1f1f1;
+  }
+  .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again */
+@media screen and (max-height: 600px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+.overlay-content {
+  top: 25%;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.login_panel {
+  text-align: center;
+  padding-top: 10%;
+
+  form {
+    font-size: 28px;
+  }
+  input[type="text"] {
+    width: 400px;
+    height: 36px;
+  }
+  input[type="password"] {
+    width: 400px;
+    height: 36px;
+  }
+  input[type="button"] {
+    font-size: 18px;
+    padding: 15px 32px;
+    background-color: #db3bcd;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+#email_message {
+  font-size: 12px;
+  margin: 5px;
+}
+#password_message {
+  font-size: 12px;
+  margin: 5px;
+}
+
+/* MAIN PAGE CONTENT */
+.page_container {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* LIST OF CINEMAS */
+.cinemas_list {
+  h2 {
+    font-family: "Noto Serif", serif;
+    color: #3a3a3a;
+    text-transform: uppercase;
+  }
+  ul {
+    padding-left: 12px;
+    list-style-type: none;
+  }
+}
+
+.repertuar {
+  cursor: pointer;
+}
+
+/* SHOWTIMES */
+
+.showtimes {
+  h2 {
+    font-family: "Noto Serif", serif;
+    color: #3a3a3a;
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Retro Cinema</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="slider.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+    <link rel="stylesheet" href="showtimes.css">
+    <link rel="stylesheet" href="booking.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+</head>
+
+<body onload="showing_chosen_movie(), showing_chosen_cinema(), selectShowtimesHours()">
+
+    <!-- Top navigation menu -->
+    <div class="top_nav">
+        <div class="home"><a href="index.html">Retro cinema</a></div>
+
+        <div class="menu">
+            <ul>
+                <li><span id="account"></span><br>
+                    <button id="wyloguj" onclick="logOut()">Wyloguj</button></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- MAIN PAGE CONTENT -->
+
+    <div class="pagecontainer">
+        <a href="index.html">⬅ Wróć</a>
+       <h2>MEGAPROMOCJA</h2>
+        <p>Z okazji otwarcia sieci kinowej Retro Cinema wszystkie bilety kosztują jedyne <span>8 zł</span> <br>
+            Śpiesz się promocja trwa jedynie do końca miesiąca.
+        </p>
+
+    </div>
+
+
+    
+
+
+
+    <script src="data.json"></script>
+    <script src="booking.js"></script>
+    <script src="cinemas.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+
+
+
+</body>
+
+</html>

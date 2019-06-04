@@ -1,0 +1,34 @@
+$primary-color: #db3bcd;
+$secondary_color: #f1f1f1;
+
+.column_title {
+  text-align: left;
+  background-color: #aaaaaa;
+}
+
+.movie_title {
+  height: auto;
+  text-align: left;
+  font-size: 24px;
+}
+
+.movie_hours {
+  /* width: 60%; */
+  text-align: center;
+}
+
+.movie_table {
+  margin-top: 32px;
+  td {
+    background-color: $secondary_color;
+    div {
+      text-align: right;
+    }
+  }
+  button {
+    background-color: $secondary_color;
+    border: none;
+    color: $primary-color;
+    font-weight: bold;
+  }
+}

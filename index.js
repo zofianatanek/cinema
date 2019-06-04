@@ -1,6 +1,5 @@
 
 
-
 // LOGIN PANEL
 /* Open */
 function openNav() {
@@ -63,12 +62,6 @@ var span_wylogowany
 var span_zalogowany
 var parentDiv
 
-
-
-
-
-
-
 // Displaying logged user name
 function logged_user(user) {
     span_zalogowany = document.createElement("span"); //create new span element
@@ -116,18 +109,37 @@ function verify_password() {
 }
 
 
-
-
 function login() {
     check_email();
     check_password();
     verify_email();
     verify_password();
-    if(zalogowany != undefined){
+    if (zalogowany != undefined) {
         closeNav()
     }
 }
 
 
+// RESPONSIVE TOP-NAV
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
 
 
+function showtime() {
+    window.scrollTo(0, 500);
+}
