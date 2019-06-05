@@ -1,3 +1,5 @@
+$primary-color: #db3bcd;
+
 *,
 *:before,
 *:after {
@@ -56,6 +58,8 @@ img {
   }
 }
 
+// BIG RESOLUTION
+
 @media screen and (min-width: 601px) {
   /* Caption text */
   .text {
@@ -65,12 +69,12 @@ img {
     bottom: 8px;
     width: 100%;
     text-align: left;
-    background-color: #db3bcd;
+    background-color: $primary-color;
     opacity: 0.8;
     position: absolute;
   }
   .polecane {
-    color: #db3bcd;
+    color: $primary-color;
     font-size: 18px;
     text-transform: uppercase;
     margin: 8px;
@@ -78,15 +82,18 @@ img {
     z-index: 1;
     font-weight: bolder;
   }
+
   .title {
     font-size: 32px;
     margin: 4px;
   }
+
   .shortcut {
     margin: 4px;
   }
 }
 
+// SMALL RESOLUTION
 @media screen and (max-width: 600px) {
   .text {
     color: #f2f2f2;
@@ -95,12 +102,12 @@ img {
     bottom: 6px;
     width: 100%;
     text-align: left;
-    background-color: #db3bcd;
+    background-color: $primary-color;
     opacity: 0.8;
     position: absolute;
   }
   .polecane {
-    color: #db3bcd;
+    color: $primary-color;
     font-size: 8px;
     text-transform: uppercase;
     margin: 8px;
@@ -108,10 +115,12 @@ img {
     z-index: 1;
     font-weight: bolder;
   }
+
   .title {
     font-size: 16px;
     margin: 4px;
   }
+
   .shortcut {
     margin: 4px;
   }
