@@ -24,11 +24,14 @@
             <ul>
                 <li><span id="account"></span><br>
                     <button id="wyloguj" onclick="logOut()">Wyloguj</button></li>
-                <!-- <li><a href="">Repertuar</a></li>
-                <li><a href="">Cennik</a></li>
-                <li><a href="">Kontakt</a></li> -->
             </ul>
         </div>
+        <div class="menu_responsive">
+
+            <div class="account"><span id="account2"></span><br>
+                <button id="wyloguj2">Wyloguj</button></div>
+        </div>
+
     </div>
 
     <!-- Overlay account panel -->
@@ -54,37 +57,41 @@
     <!-- MAIN PAGE CONTENT -->
 
     <div class="pagecontainer">
-        <div class="info">
-            <h2 id="chosen_cinema"></h2>
-            <p> Seans: <span id="movie_title"></span>
-                <span id="movie_time">Godzina:
-                    <select id ="hour">
-                    </select>
-                </span>
-            </p>
+        <div class="booking_content">
+            <div class="info">
+                <h3 id="chosen_cinema"></h3>
+                <p> Seans: <span id="movie_title"></span>
+                    <span id="movie_time">Godzina:
+                        <select id="hour">
+                        </select>
+                    </span>
+                </p>
 
-        </div>
-        <div id="seats">
-            <div id="rows_numbers"></div>
-            <div id="rows_seats"></div>
-        </div>
-
-        <div id="summary">
-            <div id="summary_data">
-                <div>Wybrane bilety: <span id="count"></span></div>
-                <div>Cena całkowita: <span id="price"></span></div>
+            </div>
+            <div id="seats">
+                <div id="rows_numbers"></div>
+                <div id="rows_seats"></div>
             </div>
 
-            <div>
-                </br>
-                <span id="final_reservation" onclick="final_reservation()">Rezerwuj ➨</span>
+            <div id="summary">
+                <div id="summary_data">
+                    <div>Wybrane bilety: <span id="count"></span></div>
+                    <div>Cena całkowita: <span id="price"></span></div>
+                </div>
+
+                <div class="final_reservation">
+                    <span id="final_reservation" onclick="final_reservation()">Rezerwuj ➨</span>
+                </div>
             </div>
+
         </div>
+
+
+        <div id="miasto"></div>
+
+
 
     </div>
-
-
-    <div id="miasto"></div>
 
 
 

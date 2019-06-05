@@ -71,16 +71,27 @@ function logged_user(user) {
     span_wylogowany = document.getElementById("account");
     parentDiv = span_wylogowany.parentNode;
     parentDiv.replaceChild(span_zalogowany, span_wylogowany); // replace existing span with new span element
-
     wyloguj = document.getElementById("wyloguj").style.display = "block";
 
 }
+
+function logged_user2(user) {
+    span_zalogowany = document.createElement("span"); //create new span element
+    span_zalogowany.setAttribute("id", "loggedUser"); // set attribute of new span element
+    var span_zalogowany_content = document.createTextNode(user); // create content for new element
+    span_zalogowany.appendChild(span_zalogowany_content); // add content to new element
+    span_wylogowany = document.getElementById("account2");
+    parentDiv = span_wylogowany.parentNode;
+    parentDiv.replaceChild(span_zalogowany, span_wylogowany); // replace existing span with new span element
+    wyloguj = document.getElementById("wyloguj2").style.display = "block";
+}
+
+
 
 // Log out button functionality
 var zalogowany
 var wyloguj = document.getElementById("wyloguj");
 wyloguj.addEventListener("click", function () {
-    wyloguj = document.getElementById("wyloguj");
     console.log("wylogowałeś się");
     zalogowany = null;
     sessionStorage.removeItem("logged_user");
@@ -88,6 +99,14 @@ wyloguj.addEventListener("click", function () {
     wyloguj = document.getElementById("wyloguj").style.display = "none";
 })
 
+var wyloguj2 = document.getElementById("wyloguj2");
+wyloguj2.addEventListener("click", function () {
+    console.log("wylogowałeś się");
+    zalogowany = null;
+    sessionStorage.removeItem("logged_user");
+    parentDiv.replaceChild(span_wylogowany, span_zalogowany);
+    wyloguj2 = document.getElementById("wyloguj2").style.display = "none";
+})
 
 // verification user password with database
 function verify_password() {
@@ -100,6 +119,7 @@ function verify_password() {
                 zalogowany = mydata[i].name;
                 sessionStorage.setItem("logged_user", zalogowany); //saving logged user in session storage
                 logged_user(sessionStorage.getItem("logged_user")); //calling function that displays logged user name
+                logged_user2(sessionStorage.getItem("logged_user")); //calling function that displays logged user name
             }
             else {
                 alert("Niepoprawne hasło");

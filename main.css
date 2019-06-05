@@ -56,6 +56,14 @@ body {
     margin-top: auto;
     margin-bottom: auto;
   }
+  button#wyloguj {
+    font-weight: bold;
+    background-color: #efefef;
+    padding: 6px;
+    width: 100px;
+    border: 2px solid #db3bcd;
+    border-radius: 8px;
+  }
   .menu_responsive {
     display: none;
   }
@@ -91,7 +99,16 @@ body {
   .account {
     color: #db3bcd;
     text-transform: uppercase;
-    padding-top: 26px;
+    margin: auto;
+    text-align: center;
+  }
+  button#wyloguj2 {
+    font-weight: bold;
+    background-color: #efefef;
+    padding: 6px;
+    width: 100px;
+    border: 2px solid #db3bcd;
+    border-radius: 8px;
   }
   .menu {
     display: none;
@@ -284,4 +301,26 @@ body {
   font-family: "Noto Serif", serif;
   color: #3a3a3a;
   text-transform: uppercase;
+}
+
+div.pricelist {
+  max-width: 80%;
+  text-align: center;
+  margin: auto;
+}
+
+div.pricelist h2 {
+  text-transform: uppercase;
+  color: #db3bcd;
+}
+
+div.pricelist span {
+  color: #db3bcd;
+  font-weight: bold;
+}
+
+#back {
+  text-decoration: none;
+  color: #db3bcd;
+  margin: 20px;
 }

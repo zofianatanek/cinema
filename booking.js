@@ -2,6 +2,7 @@ var cinemaData = JSON.parse(cinemaList);
 
 // Displaying logged user
 document.getElementById("account").innerHTML = sessionStorage.getItem("logged_user");
+document.getElementById("account2").innerHTML = sessionStorage.getItem("logged_user");
 
 if (sessionStorage.getItem("logged_user") == undefined){
     document.getElementById("wyloguj").style = "display:none"

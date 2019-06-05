@@ -49,13 +49,22 @@ body {
 // Big resolution
 @media screen and (min-width: 601px) {
   .menu {
-    color: #db3bcd;
+    color: $primary-color;
     font-size: 20px;
     text-transform: uppercase;
     text-decoration: none;
     margin-right: 48px;
     margin-top: auto;
     margin-bottom: auto;
+  }
+
+  button#wyloguj {
+    font-weight: bold;
+    background-color: #efefef;
+    padding: 6px;
+    width: 100px;
+    border: 2px solid $primary-color;
+    border-radius: 8px;
   }
 
   .menu_responsive {
@@ -95,8 +104,19 @@ body {
   .account {
     color: $primary-color;
     text-transform: uppercase;
-    padding-top: 26px;
+    margin: auto;
+    text-align: center;
   }
+
+  button#wyloguj2 {
+    font-weight: bold;
+    background-color: #efefef;
+    padding: 6px;
+    width: 100px;
+    border: 2px solid $primary-color;
+    border-radius: 8px;
+  }
+
   .menu {
     display: none;
   }
@@ -294,4 +314,24 @@ body {
     color: #3a3a3a;
     text-transform: uppercase;
   }
+}
+
+// PRICELIST PAGE
+div.pricelist{
+  max-width: 80%;
+  text-align: center;
+  margin: auto;
+  h2 {
+    text-transform: uppercase;
+    color: $primary-color;
+  }
+  span {
+    color: $primary-color;
+    font-weight: bold;
+  }
+}
+#back {
+  text-decoration: none;
+  color: $primary-color;
+  margin: 20px;
 }

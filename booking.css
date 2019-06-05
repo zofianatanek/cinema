@@ -1,12 +1,18 @@
 /* INFO */
+.home {
+  font-size: 32px;
+}
+
 .info {
   text-align: center;
 }
 
 #seats {
+  max-width: 100%;
   text-align: center;
   display: flex;
   justify-content: center;
+  margin: auto;
 }
 
 .row {
@@ -15,15 +21,15 @@
 }
 
 .row_number {
-  margin: 7px;
+  margin: 4px;
   color: #db3bcd;
   font-weight: bold;
 }
 
 .seat {
   background-color: grey;
-  height: 25px;
-  width: 25px;
+  height: 22px;
+  width: 22px;
   margin: 2px;
   text-align: center;
 }
@@ -33,6 +39,42 @@
 }
 
 #summary {
+  max-width: 45%;
+  margin: auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+}
+
+#summary_data {
+  text-align: left;
+}
+
+.final_reservation {
+  text-align: right;
+}
+
+.final_reservation span {
+  cursor: pointer;
+}
+
+.final_reservation span:hover {
+  color: #db3bcd;
+}
+
+@media screen and (max-width: 600px) {
+  .seat {
+    height: 12px;
+    width: 12px;
+    font-size: 10px;
+    margin: 2px;
+    text-align: center;
+  }
+  .row_number {
+    font-size: 10px;
+    margin: 2px;
+    font-weight: bold;
+  }
+  #summary {
+    max-width: 80%;
+  }
 }
