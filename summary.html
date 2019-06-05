@@ -11,10 +11,11 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
     <link rel="stylesheet" href="showtimes.css">
     <link rel="stylesheet" href="booking.css">
+    <link rel="stylesheet" href="summary.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
 </head>
 
-<body onload="showing_chosen_movie(), showing_chosen_cinema(), selectShowtimesHours()">
+<body>
 
     <!-- Top navigation menu -->
     <div class="top_nav">
@@ -25,13 +26,16 @@
     <!-- MAIN PAGE CONTENT -->
 
     <div class="pagecontainer">
-        <a href="index.html" id="back">⬅ Wróć</a>
-        <div class="pricelist">
-        <h2>Promocja</h2>
-        <p>Z okazji otwarcia sieci kinowej Retro Cinema wszystkie bilety kosztują jedyne <span>8 zł</span> <br>
-            Śpiesz się promocja trwa jedynie do końca miesiąca.
-        </p>
+        <div class="sum">
+            <div class="reservation_info">
+                Witaj zarezerwowałeś bilety na seans: <span id="movie_reserved"></span> o godzinie <span id="time_reserved"></span> w kinie <span id="cinema_reserved"></span> 
+            </div>
+            <div class="tickets_info">
+                <p>Bilety:</p>
+                <div class="tickets">
 
+                </div>
+            </div>
         </div>
        
     </div>
@@ -39,11 +43,10 @@
 
 
     <script src="data.json"></script>
-    <script src="booking.js"></script>
-    <script src="cinemas.js"></script>
+    <script src="summary.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <script src="index.js"></script>
+    <!-- <script src="index.js"></script> -->
 
 
 

@@ -1,5 +1,12 @@
 var cinemaData = JSON.parse(cinemaList);
 
+// End of session
+
+function endOfSession(){
+    setTimeout(function(){logOut();}, 600000)
+
+}
+
 // Displaying logged user
 document.getElementById("account").innerHTML = sessionStorage.getItem("logged_user");
 document.getElementById("account2").innerHTML = sessionStorage.getItem("logged_user");
@@ -163,6 +170,7 @@ function final_reservation() {
     sessionStorage.setItem("hour", selectedHour);
     sessionStorage.setItem("seats", currentSeatsNumbers);
     sessionStorage.setItem("rows", currentRows);
+    location.href = "./summary.html";
 }
 
 

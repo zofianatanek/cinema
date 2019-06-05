@@ -1,0 +1,12 @@
+div.reservation_info {
+  margin: 50px;
+  text-align: center;
+}
+
+div.reservation_info span {
+  font-weight: bold;
+}
+
+div.tickets_info {
+  text-align: center;
+}
