@@ -157,6 +157,15 @@ body {
   .showtimes div.movie_table {
     margin: 8px;
   }
+  td {
+    font-size: 12px;
+  }
+  span.movie_title {
+    font-size: 16px;
+  }
+  span.movie_length {
+    font-size: 12px;
+  }
 }
 
 /* OVERLAY */
