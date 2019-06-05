@@ -46,17 +46,16 @@ body {
   margin-right: 16px;
 }
 
-.menu {
-  color: #db3bcd;
-  font-size: 20px;
-  text-transform: uppercase;
-  text-decoration: none;
-  margin-right: 48px;
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
 @media screen and (min-width: 601px) {
+  .menu {
+    color: #db3bcd;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-right: 48px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
   .menu_responsive {
     display: none;
   }
@@ -136,11 +135,27 @@ body {
   }
   .cinemas_list {
     width: 90%;
-    margin: auto;
+    margin: 20px;
+  }
+  .cinemas_list h2 {
+    font-size: 18px;
+  }
+  div.cinema {
+    font-size: 14px;
   }
   .showtimes {
     width: 90%;
-    margin: auto;
+    margin: 20px;
+  }
+  .showtimes h2 {
+    font-size: 18px;
+  }
+  .showtimes h3 {
+    font-size: 16px;
+    margin-left: 8px;
+  }
+  .showtimes div.movie_table {
+    margin: 8px;
   }
 }
 
@@ -178,7 +193,6 @@ body {
   font-size: 60px;
 }
 
-/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again */
 @media screen and (max-width: 600px) {
   .overlay a {
     font-size: 20px;
